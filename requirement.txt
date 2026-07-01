@@ -1,0 +1,14 @@
+# AWS Service Advisor Agent - Dependencies
+
+# Module 1-2: Strands Agents SDK
+strands-agents
+strands-agents-tools
+
+# Module 3: MCP Server
+fastmcp
+
+# Module 5: AgentCore Deployment
+agentcore-cli
+
+# AWS SDK
+boto3

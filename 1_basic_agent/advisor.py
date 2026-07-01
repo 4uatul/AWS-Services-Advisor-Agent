@@ -17,9 +17,7 @@ system_prompt = """You are an AWS Solutions Architect advisor.
    Always think through requirements before jumping to recommendations.
    Use the "chose X over Y because Z" tradeoff framing.
    
-   Your goal is to help users make informed decisions about AWS services based on their needs and constraints.
-   
-   Keep your recommendations concise but informative, and always justify your choices."""
+   Your goal is to help users make informed decisions about AWS services based on their needs and constraints."""
 
 advisor = Agent(
        model=model,
