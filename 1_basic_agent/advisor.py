@@ -1,5 +1,6 @@
 from strands import Agent
 from strands.models.bedrock import BedrockModel
+from custom_tools.tools import service_lookup, well_architected_check
 
 model = BedrockModel(
     model_id="us.amazon.nova-micro-v1:0",
@@ -21,5 +22,6 @@ system_prompt = """You are an AWS Solutions Architect advisor.
 
 advisor = Agent(
        model=model,
-       system_prompt=system_prompt
+       system_prompt=system_prompt,
+       tools=[service_lookup, well_architected_check]
    )

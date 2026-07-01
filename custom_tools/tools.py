@@ -387,6 +387,8 @@ def service_lookup(service_name: str) -> dict:
         Dictionary with service details including description, use_cases,
         key_features, limits, pricing_model, and alternatives.
     """
+    print(f"\n>>> TOOL CALLED: service_lookup('{service_name}')")
+    
     # Normalize the input to match our keys
     key = (
         service_name.lower()
@@ -592,6 +594,8 @@ def well_architected_check(architecture_description: str, pillar: str = "all") -
     Returns:
         Dictionary with key questions, common gaps, and recommendations per pillar.
     """
+    print(f"\n>>> TOOL CALLED: well_architected_check(pillar='{pillar}')")
+
     if pillar == "all":
         result = {
             "architecture_reviewed": architecture_description,
