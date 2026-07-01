@@ -1,4 +1,4 @@
-from custom_tools.tools import service_lookup, well_architected_check
+from tools import service_lookup, well_architected_check
 from strands import Agent
 from strands.models.bedrock import BedrockModel
 
@@ -20,4 +20,4 @@ advisor("Review this: EC2 in one AZ, RDS single instance, no ALB")
 
 # Test 3: Should use NO tools
 print("\n===== TEST 3: NO TOOLS =====")
-advisor("What is the difference between ALB and NLB?")
+advisor("What is the human")
