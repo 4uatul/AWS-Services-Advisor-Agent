@@ -8,7 +8,7 @@ strands-agents-tools
 fastmcp
 
 # Module 5: AgentCore Deployment
-agentcore-cli
+bedrock-agentcore
 
 # AWS SDK
 boto3
