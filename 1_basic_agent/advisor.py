@@ -1,6 +1,15 @@
+import os
 from strands import Agent
 from strands.models.bedrock import BedrockModel
 from tools import service_lookup, well_architected_check
+
+os.environ['STRANDS_TOOLS_CONSOLE_MODE'] = 'true'
+
+def advisor_agent(query: str) -> str:
+    """Run the advisor agent with the given query."""
+    response = advisor(query)
+    print("\n\n")
+    return response
 
 model = BedrockModel(
     model_id="us.amazon.nova-micro-v1:0",
@@ -25,3 +34,13 @@ advisor = Agent(
        system_prompt=system_prompt,
        tools=[service_lookup, well_architected_check]
    )
+
+if __name__ == "__main__":
+    print("AWS Service Advisor -- type 'exit' to quit\n")
+    while True:
+        query = input("You: ").strip()
+        if query.lower() in ("exit", "quit"):
+            break
+        if not query:
+            continue
+        advisor_agent(query)
